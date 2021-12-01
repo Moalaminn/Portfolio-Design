@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+
+:root {
+  --primary-color: #cacaca;
+  --secondary-color: #999999;
+  --dark-color: #3a3a3a;
+  --light-color: #f4f4f4;
+  --success-color: #5cb85c;
+  --error-color: #d9534f;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "lato", sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--dark-color);
+}
+
+h1,
+h2 {
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 10px 0;
+}
+
+p {
+  margin: 10px 0;
+}
+
+/* Nav Bar */
+
+.navbar {
+  background-color: var(--primary-color);
+  color: #fff;
+  height: 50px;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.navbar a {
+  color: var(--dark-color);
+  padding: 10px;
+  margin: 0 5px;
+}
+
+.navbar a:hover {
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar .flex {
+  justify-content: space-between;
+}
+
+.logo {
+  color: var(--dark-color);
+  margin: 0;
+  font-weight: bolder;
+}
+
+/* Showcase */
+.showcase {
+  height: 400px;
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.showcase h1 {
+  margin: 0;
+}
+
+.showcase p {
+  margin: 5px 0;
+}
+
+.showcase .grid {
+  grid-template-columns: 1fr;
+}
+
+.showcase-text {
+  text-align: center;
+  text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+}
+
+.languages .flex {
+  flex-wrap: wrap;
+}
+
+.languages .card {
+  text-align: center;
+  margin: 18px 10px 40px;
+  transition: transform 0.2s ease;
+}
+
+.languages .card h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.languages .card:hover {
+  transform: translateY(-15px);
+}
+
+/* About Me */
+
+.aboutme-section-title {
+  text-align: center;
+}
+
+.aboutme-head .grid {
+  gap: 10px 20px;
+}
+
+.aboutme-head .grid > *:first-child {
+  grid-column: 1 / span 3;
+}
+
+.footer .grid {
+  grid-template-columns: 1fr;
+  text-align: center;
+}
+
+.languages {
+  background-color: var(--primary-color);
+  padding: 50px 10px;
+}
+
+@media (max-width: 768px) {
+  .grid,
+  .showcase .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .showcase {
+    height: auto;
+    padding-bottom: 20px;
+  }
+
+  .showcase-text {
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    height: 110px;
+  }
+
+  .navbar h1 {
+    padding-top: 10px;
+  }
+
+  .navbar .flex {
+    flex-direction: column;
+  }
+
+  .navbar ul {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  .showcase-text h1 {
+    font-size: 3rem;
+  }
+  .showcase-text p {
+    font-size: 1rem;
+  }
+}
