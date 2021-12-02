@@ -2,5 +2,5 @@
 
 Custom portfolio website template created by myself.
 
-- Shares similarities with the Loruki Website created
+- Shares similarities with the Loruki Website
 - Fully responsive
